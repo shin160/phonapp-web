@@ -1,23 +1,15 @@
-import React, { ReactNode } from 'react';
-import './ResponsiveFrame.css';
+// src/components/ResponsiveFrame.tsx
+import React from 'react';
 
 interface ResponsiveFrameProps {
-  isLoading: boolean;
-  children: ReactNode;
+  isMobile: boolean;
+  children: React.ReactNode;
 }
 
-const ResponsiveFrame: React.FC<ResponsiveFrameProps> = ({ isLoading, children }) => {
+const ResponsiveFrame: React.FC<ResponsiveFrameProps> = ({ isMobile, children }) => {
   return (
-    <div className="responsive-container">
-      {isLoading ? (
-        <div className="loading-screen">
-          <p>Loading...</p>
-        </div>
-      ) : (
-        <div className="content-frame">
-          {children}
-        </div>
-      )}
+    <div style={{ width: isMobile ? '100%' : '800px', margin: '0 auto' }}>
+      {children}
     </div>
   );
 };
