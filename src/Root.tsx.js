@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
 
-export default function Root() {
+const Root = () => {
   return (
-    <View>
-      <Text>アプリを開始します</Text>
-    </View>
+    <div>
+      <h1>ようこそ、PhonAppへ！</h1>
+      {/* ここにアプリのメインコンテンツを追加 */}
+    </div>
   );
-}
+};
+
+export default Root;

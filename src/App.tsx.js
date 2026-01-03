@@ -1,11 +1,13 @@
 import React from "react";
 import ResponsiveFrame from "./src/components/ResponsiveFrame";
-import Root from "./src/Root"; // ←あなたの実際のルートに合わせて
+import Root from "./Root";
 
-export default function App() {
+const App = () => {
   return (
     <ResponsiveFrame>
       <Root />
     </ResponsiveFrame>
   );
-}
+};
+
+export default App;
