@@ -1,37 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>web-phonapp</title>
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
+    <meta http-equiv="refresh" content="0; url=/phonapp-web/" />
+    <script>
+      // 404で来たパスをクエリに退避してトップへ返す（SPA用）
+      (function() {
+        var l = window.location;
+        var redirect = "/phonapp-web/?p=" + encodeURIComponent(l.pathname + l.search + l.hash);
+        l.replace(redirect);
+      })();
+    </script>
   </head>
-
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/phonapp-web/_expo/static/js/web/index-b6c579833b498d69a6d0af9302f08104.js" defer></script>
-</body>
+  <body></body>
 </html>
