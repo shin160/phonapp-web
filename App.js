@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 
 import Header from './src/Header';
 import Footer from './src/Footer';
@@ -43,10 +43,17 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+
+    // ★ Web 対応（GitHub Pages対策）
+    width: Platform.OS === 'web' ? '100vw' : '100%',
+    minHeight: Platform.OS === 'web' ? '100vh' : '100%',
   },
   content: {
-    flex: 1, // メインコンテンツに利用可能なスペースの全てを割り当てる
+    flex: 1,
+
+    // ★ Webでスクロールを正しく効かせる
+    overflow: Platform.OS === 'web' ? 'auto' : 'visible',
   }
 });
 
