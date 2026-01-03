@@ -23,11 +23,10 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "bundler": "metro",
-      "publicPath": "./"
+      "bundler": "metro"
     },
     "experiments": {
-      "baseUrl": "/phonapp-web"
+      "basePath": "/phonapp-web"
     }
   }
 }
